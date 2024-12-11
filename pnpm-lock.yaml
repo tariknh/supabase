@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@supabase/sql-to-rest>libpg-query': 15.2.0-rc.deparse.3
-
 importers:
 
   .:
@@ -9829,6 +9826,9 @@ packages:
   libpg-query@13.3.1:
     resolution: {integrity: sha512-RLvnKPLWngNR7bNep/Q9euPcfFJVFfDg/iP13lYGxcSI01emS/1vbTw6EBd8UordweWFdvUuK+31sHp104dukA==}
 
+  libpg-query@15.2.0:
+    resolution: {integrity: sha512-fBi14tsU3/ahtfU0C+/tvmtlt0EJM6kXe0Dl4/cSbiNmJ3IwLIuk3lawwiK5ByXU4sXwyAzbkvSl26jVXzYuaA==}
+
   libpg-query@15.2.0-rc.deparse.3:
     resolution: {integrity: sha512-e8OPjGPqy3H+rSdwQigkeibSIE6WMU4yyYZErPNgHeyZHcRGOuNSuSx0ifJhgVl7JkapVHtSau2ZCl3g65RTRg==}
 
@@ -19181,7 +19181,7 @@ snapshots:
   '@supabase/sql-to-rest@0.1.6(encoding@0.1.13)':
     dependencies:
       '@babel/parser': 7.24.7
-      libpg-query: 15.2.0-rc.deparse.3(encoding@0.1.13)
+      libpg-query: 15.2.0(encoding@0.1.13)
       prettier: 3.2.5
     transitivePeerDependencies:
       - encoding
@@ -24023,6 +24023,17 @@ snapshots:
       node-gyp: 8.4.1
     transitivePeerDependencies:
       - bluebird
+      - encoding
+      - supports-color
+
+  libpg-query@15.2.0(encoding@0.1.13):
+    dependencies:
+      '@emnapi/runtime': 0.43.1
+      '@mapbox/node-pre-gyp': 1.0.11(encoding@0.1.13)
+      '@pgsql/types': 15.0.2
+      node-addon-api: 7.1.0
+      node-gyp: 10.1.0
+    transitivePeerDependencies:
       - encoding
       - supports-color
 
